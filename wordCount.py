@@ -22,7 +22,13 @@ for line in text:
             else:
                 dictonary[word] = 1 #Else add and give it value 1
 
+text.close() #close the reading file 
+
 orderDictonary = sorted(dictonary) #Order dictonary in alphabetical order
 
+out = open(outPut, "w") #Open new file in write mode.
+
 for k in orderDictonary:
-    print(k + " " + str(dictonary[k])) #Print dictonary content (debug Tester)
+    out.write(k + " " + str(dictonary[k])+ "\n") #Write to file all dictonary words and values.
+
+out.close() #close the writing file
