@@ -12,8 +12,17 @@ dictonary = dict() #Create a new dictonary
 
 for line in text:
     if not line.isspace(): #Check if the line is not empty
+        line = re.sub(r"[,.;@?!&$'-]+\ *", " ", line) #Get rid of all punctuation in the line and turn it into a white space
         line = line.strip() #Get rid of leading or traling empty space
         line = line.lower() #Trun all characters into lower case
-        line = re.sub(r"[,.;@?!&$'-]+\ *", " ", line) #Get rid of all punctuation in the line and turn it into a white space
-        word = line.split(" ") #Split the string into tokes by empty spaces
-    print(line, word) #Print the string and the tokenized vesion (Debug Tester)
+        words = line.split(" ") #Split the string into tokes by empty spaces
+        for word in words: #Traverse all the words in each line
+            if word in dictonary: #check if the word is already in the dictonary
+                dictonary[word] = dictonary[word] + 1 #If yes add one to the value
+            else:
+                dictonary[word] = 1 #Else add and give it value 1
+
+orderDictonary = sorted(dictonary) #Order dictonary in alphabetical order
+
+for k in orderDictonary:
+    print(k + " " + str(dictonary[k])) #Print dictonary content (debug Tester)
