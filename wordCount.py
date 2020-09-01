@@ -1,4 +1,9 @@
+#Anthony Herrera
+#Aug 31, 2020
+#CS 4375
+
 #!/usr/bin/env python3
+
 
 import string
 import sys
@@ -13,7 +18,7 @@ dictonary = dict() #Create a new dictonary
 for line in text:
     if not line.isspace(): #Check if the line is not empty
         line = re.sub(r"[,.;:@?!&$'-]+\ *", " ", line) #Get rid of all punctuation in the line and turn it into a white space
-        line = re.sub(r"[\"]+\ *", "", line) #Get rrid of any \" found in text
+        line = re.sub(r"[\"]+\ *", "", line) #Get rid of any \" found in text
         line = line.strip() #Get rid of leading or traling empty space
         line = line.lower() #Trun all characters into lower case
         words = line.split(" ") #Split the string into tokes by empty spaces
