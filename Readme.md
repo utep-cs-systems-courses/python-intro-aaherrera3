@@ -1,3 +1,26 @@
+# Word Counter:
+
+  Word Counter is a python program that takes two system variables, it takes the input.txt thats the file it will read
+and the output.txt the file it will write to. It will take the input file and tokenize all the words and count how many 
+times that word is found. It will then write the word and the number of times it was found in the output file. 
+
+## Installation
+
+  To use wordCount.py all you have to do is downlad the file and place it in the desired folder.
+
+## Usage
+  To use wordCount.py you first must have python3 installed on your computer then run the command with the input file 
+and output file.
+
+  $ python wordCount.py input.txt output.txt
+
+  
+
+
+
+
+
+
 This repository contains the code for the python introduction lab. The
 purpose is to have a fairly simple python assignment that introduces
 the basic features and tools of python
